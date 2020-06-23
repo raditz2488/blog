@@ -15,6 +15,7 @@ const blogReducer = (state, action) => {
 export const BlogProvider = ({ children }) => {
 
      const [blogPosts, setBlogPosts] = useState([]);
+     const [state, dispatch] = useReducer(blogReducer, []);
 
      const addBlogPost = () => {
          setBlogPosts([...blogPosts, { title: `Blog Post #${blogPosts.length + 1}` }])
