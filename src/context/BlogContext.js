@@ -19,6 +19,7 @@ export const BlogProvider = ({ children }) => {
 
      const addBlogPost = () => {
          setBlogPosts([...blogPosts, { title: `Blog Post #${blogPosts.length + 1}` }])
+         dispatch({ type: 'add_blogPost' })
      }
 
     return <BlogContext.Provider value={{data: blogPosts, addBlogPost}}>
