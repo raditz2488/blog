@@ -9,7 +9,6 @@ const IndexScreen = () => {
 
     return <View>
         <Text>Index Screen</Text>
-        <Text>{value}</Text>
     </View>
 }
 
