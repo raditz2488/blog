@@ -22,7 +22,7 @@ export const BlogProvider = ({ children }) => {
          dispatch({ type: 'add_blogPost' })
      }
 
-    return <BlogContext.Provider value={{data: blogPosts, addBlogPost}}>
+    return <BlogContext.Provider value={{data: state, addBlogPost}}>
         {children}
     </BlogContext.Provider>
 };
