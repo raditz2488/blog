@@ -9,5 +9,5 @@ export default (reducer, actions, initialState) => {
         return <Context.Provider value={state}>{children}</Context.Provider>
     }
 
-    
+    return { Context, Provider };
 }
