@@ -7,9 +7,9 @@ const CreateScreen = () => {
 
     return <View>
         <Text style={styles.text}>Title</Text>
-        <TextInput style={styles.input}/>
+        <TextInput style={styles.input} value={title} onChangeText={(text) => setTitle(text)}/>
         <Text style={styles.text}>Content</Text>
-        <TextInput style={styles.input}/>
+        <TextInput style={styles.input} value={content} onChangeText={(text) => setContent(text)}/>
     </View>
 }
 
