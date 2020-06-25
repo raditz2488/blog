@@ -28,7 +28,7 @@ const IndexScreen = ({ navigation }) => {
     </View>
 }
 
-IndexScreen.navigationOptions = () => {
+IndexScreen.navigationOptions = ({ navigation }) => {
     return {
         headerRight: () => {
             return <TouchableOpacity>
