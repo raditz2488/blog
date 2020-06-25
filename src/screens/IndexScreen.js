@@ -18,7 +18,7 @@ const IndexScreen = () => {
             renderItem={ ({ item }) => {
                 return <View style={styles.row}>
                     <Text style={styles.title}>{item.title}</Text>
-                    <Feather name='trash' size={22}/>
+                    <Feather name='trash' style={styles.icon}/>
                 </View>
             } }
         />
@@ -34,6 +34,9 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 18
+    },
+    icon: {
+        fontSize: 22
     }
 });
 
