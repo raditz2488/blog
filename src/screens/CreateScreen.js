@@ -6,6 +6,8 @@ const CreateScreen = () => {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
 
+    const { addBlogPost } = useContext(Context);
+
     return <View>
         <Text style={styles.text}>Title</Text>
         <TextInput style={styles.input} value={title} onChangeText={(text) => setTitle(text)}/>
