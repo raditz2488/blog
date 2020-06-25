@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
 import { Context } from '../context/BlogContext';
 import { add } from 'react-native-reanimated';
 
-const CreateScreen = () => {
+const CreateScreen = ({ navigation }) => {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
 
