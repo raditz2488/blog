@@ -5,11 +5,20 @@ const CreateScreen = () => {
     return <View>
         <Text>Title</Text>
         <TextInput/>
-        <Text>Title</Text>
+        <Text>Content</Text>
         <TextInput/>
     </View>
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+    input: {
+        fontSize: 18,
+        borderWidth: 1,
+        borderColor: 'black'
+    },
+    text: {
+        fontSize: 22,
+    }
+});
 
 export default CreateScreen;
