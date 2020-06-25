@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput } from 'react-native';
 
 const CreateScreen = () => {
+    const [title, setTitle] = useState('');
+    const [content, setContent] = useState('');
+
     return <View>
         <Text style={styles.text}>Title</Text>
         <TextInput style={styles.input}/>
