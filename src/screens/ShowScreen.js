@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const ShowScreen = () => {
+const ShowScreen = ({ navigation }) => {
     return <View>
         <Text>Show Screen</Text>
     </View>
