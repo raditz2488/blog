@@ -31,6 +31,7 @@ const IndexScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
     row: {
         paddingVertical: 20,
+        paddingHorizontal: 20,
         flexDirection: 'row',
         justifyContent: 'space-between',
         borderBottomWidth: 1
