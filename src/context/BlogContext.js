@@ -16,7 +16,7 @@ const blogReducer = (state, action) => {
 
 // Will change
 const addBlogPost = (dispatch) => {
-    return () => {
+    return (title, content) => {
         dispatch({ type: "add_blogPost" });
     };
 }
