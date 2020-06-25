@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
 import { Context } from '../context/BlogContext';
+import { add } from 'react-native-reanimated';
 
 const CreateScreen = () => {
     const [title, setTitle] = useState('');
@@ -13,7 +14,10 @@ const CreateScreen = () => {
         <TextInput style={styles.input} value={title} onChangeText={(text) => setTitle(text)}/>
         <Text style={styles.text}>Content</Text>
         <TextInput style={styles.input} value={content} onChangeText={(text) => setContent(text)}/>
-        <Button title={"Save"}/>
+        <Button 
+            title={"Save"}
+            onPress={() => addBlogPost(title, content) }
+        />
     </View>
 }
 
