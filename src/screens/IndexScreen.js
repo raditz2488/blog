@@ -17,7 +17,7 @@ const IndexScreen = () => {
             keyExtractor={ (blog) => blog.title }
             renderItem={ ({ item }) => {
                 return <View style={styles.row}>
-                    <Text style={styles.title}>{item.title}</Text>
+                    <Text style={styles.title}>{item.title} - {item.id}</Text>
                     <Feather name='trash' style={styles.icon}/>
                 </View>
             } }
