@@ -31,7 +31,9 @@ const IndexScreen = ({ navigation }) => {
 IndexScreen.navigationOptions = () => {
     return {
         headerRight: () => {
-            return <Feather name="plus" size={30} />
+            return <TouchableOpacity>
+                <Feather name="plus" size={30} />
+            </TouchableOpacity>
         }
     }
 };
