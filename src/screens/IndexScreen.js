@@ -18,7 +18,7 @@ const IndexScreen = () => {
             renderItem={ ({ item }) => {
                 return <View style={styles.row}>
                     <Text style={styles.title}>{item.title} - {item.id}</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={ () => deleteBlogPost(item.id) }>
                         <Feather name='trash' style={styles.icon}/>
                     </TouchableOpacity>
                 </View>
