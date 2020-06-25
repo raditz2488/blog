@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
+import { Context } from '../context/BlogContext';
 
 const CreateScreen = () => {
     const [title, setTitle] = useState('');
