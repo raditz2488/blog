@@ -3,10 +3,10 @@ import { View, Text, StyleSheet, TextInput } from 'react-native';
 
 const CreateScreen = () => {
     return <View>
-        <Text>Title</Text>
-        <TextInput/>
-        <Text>Content</Text>
-        <TextInput/>
+        <Text style={styles.text}>Title</Text>
+        <TextInput style={styles.input}/>
+        <Text style={styles.text}>Content</Text>
+        <TextInput style={styles.input}/>
     </View>
 }
 
