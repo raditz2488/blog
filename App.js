@@ -6,7 +6,8 @@ import { Provider } from './src/context/BlogContext';
 import ShowScreen from './src/screens/ShowScreen';
 
 const navigator = createStackNavigator({
-  Index: IndexScreen
+  Index: IndexScreen,
+  Show: ShowScreen
 }, {
   initialRouteName: 'Index',
   defaultNavigationOptions: {
