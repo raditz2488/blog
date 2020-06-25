@@ -28,6 +28,14 @@ const IndexScreen = ({ navigation }) => {
     </View>
 }
 
+IndexScreen.navigationOptions = () => {
+    return {
+        headerRight: () => {
+            return <Feather name="plus" size={30} />
+        }
+    }
+};
+
 const styles = StyleSheet.create({
     row: {
         paddingVertical: 20,
