@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, Button } from 'react-native';
 
-const BlogPostForm = ({ initialValues }) => {
+const BlogPostForm = ({ initialValues, onSumbit }) => {
     const [title, setTitle] = useState(initialValues.title);
     const [content, setContent] = useState(initialValues.content);
 
@@ -13,7 +13,7 @@ const BlogPostForm = ({ initialValues }) => {
         <Button 
             title={"Save"}
             onPress={ 
-                () => {  } 
+                () => onSumbit(title, content) 
             }
         />
     </View>
