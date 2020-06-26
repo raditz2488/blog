@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
 import { Context } from '../context/BlogContext';
-import { add } from 'react-native-reanimated';
+import BlogPostForm from '../components/BlogPostForm';
 
 const CreateScreen = ({ navigation }) => {
     const [title, setTitle] = useState('');
@@ -9,22 +9,7 @@ const CreateScreen = ({ navigation }) => {
 
     const { addBlogPost } = useContext(Context);
 
-    return <View>
-        <Text style={styles.text}>Title</Text>
-        <TextInput style={styles.input} value={title} onChangeText={(text) => setTitle(text)}/>
-        <Text style={styles.text}>Content</Text>
-        <TextInput style={styles.input} value={content} onChangeText={(text) => setContent(text)}/>
-        <Button 
-            title={"Save"}
-            onPress={ 
-                () => {
-                    addBlogPost(title, content, () => {
-                        navigation.navigate('Index');
-                    })
-                } 
-            }
-        />
-    </View>
+    return <BlogPostForm></BlogPostForm>
 }
 
 const styles = StyleSheet.create({

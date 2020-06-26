@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, StyleSheet} from 'react-native';
+import { View, Text, TextInput, StyleSheet, Button } from 'react-native';
 
 const BlogPostForm = () => {
     const [title, setTitle] = useState('');
