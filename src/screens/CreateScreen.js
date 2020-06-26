@@ -6,7 +6,9 @@ import BlogPostForm from '../components/BlogPostForm';
 const CreateScreen = ({ navigation }) => {
     const { addBlogPost } = useContext(Context);
 
-    return <BlogPostForm></BlogPostForm>
+    return <BlogPostForm 
+        onSumbit={ (title, content) => addBlogPost(title, content, () => navigation.navigate('Index')) }
+    />
 }
 
 const styles = StyleSheet.create({
