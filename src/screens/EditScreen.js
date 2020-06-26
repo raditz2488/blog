@@ -5,12 +5,12 @@ import { Context } from '../context/BlogContext';
 
 const EditScreen = ({ navigation }) => {
     const id = navigation.getParam('id')
-    const { state } = useContext(Context);
+    const { state, editBlogPost } = useContext(Context);
     const blogPost = state.find((blogPost) => blogPost.id === id)
 
     return <BlogPostForm
         initialValues={ { title: blogPost.title, content: blogPost.content } }
-        onSumbit={ (title, content) => console.log(title) }
+        onSumbit={ (title, content) => editBlogPost(id, title, content, () => navigation.pop() ) }
     />
 }
 
