@@ -1,10 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
+import BlogPostForm from '../components/BlogPostForm';
 
 const EditScreen = () => {
-    return <View>
-        <Text>Edit Screen</Text>
-    </View>
+    return <BlogPostForm></BlogPostForm>
 }
 
 const styles = StyleSheet.create({});

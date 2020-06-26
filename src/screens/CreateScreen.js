@@ -1,12 +1,9 @@
-import React, { useState, useContext } from 'react';
-import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
+import React, { useContext } from 'react';
+import { StyleSheet } from 'react-native';
 import { Context } from '../context/BlogContext';
 import BlogPostForm from '../components/BlogPostForm';
 
 const CreateScreen = ({ navigation }) => {
-    const [title, setTitle] = useState('');
-    const [content, setContent] = useState('');
-
     const { addBlogPost } = useContext(Context);
 
     return <BlogPostForm></BlogPostForm>
