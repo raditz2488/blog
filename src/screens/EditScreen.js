@@ -8,7 +8,10 @@ const EditScreen = ({ navigation }) => {
     const { state } = useContext(Context);
     const blogPost = state.find((blogPost) => blogPost.id === id)
 
-    return <BlogPostForm initialValues={ { title: blogPost.title, content: blogPost.content } }></BlogPostForm>
+    return <BlogPostForm
+        initialValues={ { title: blogPost.title, content: blogPost.content } }
+        onSumbit={ (title, content) => console.log(title) }
+    />
 }
 
 const styles = StyleSheet.create({});
