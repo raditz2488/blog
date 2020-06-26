@@ -13,10 +13,10 @@ const ShowScreen = ({ navigation }) => {
     </View>
 };
 
-ShowScreen.navigationOptions = () => {
+ShowScreen.navigationOptions = ({ navigation }) => {
     return {
         headerRight: () => {
-            return <TouchableOpacity>
+            return <TouchableOpacity onPress={ () => navigation.navigate('Edit') }>
                 <EvilIcons name="pencil" size={30}/>
             </TouchableOpacity>
         }
