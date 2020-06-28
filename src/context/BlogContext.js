@@ -24,7 +24,13 @@ const blogReducer = (state, action) => {
     }
 }
 
-// Will change
+const getBlogPosts = (dispatch) => {
+    return async () => {
+        const result = await jsonServer.get("/blogposts");
+        dispatch({ type: "get_blogPosts", payload: result.data });
+    }
+}
+
 const addBlogPost = (dispatch) => {
     return (title, content, callback) => {
         dispatch({ type: "add_blogPost", payload: {title, content} });
