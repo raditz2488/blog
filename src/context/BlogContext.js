@@ -3,6 +3,9 @@ import createDataContext from './createDataContext';
 // Will change
 const blogReducer = (state, action) => {
     switch (action.type) {
+        case "get_blogPosts":
+            return action.payload
+
         case "add_blogPost":
             return [...state, { title: action.payload.title, content: action.payload.content, id: Math.floor(Math.random() * 99999) }];
 
